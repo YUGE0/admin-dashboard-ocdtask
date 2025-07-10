@@ -2,7 +2,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 
-let Cars = [
+const Cars = [
   { id: 0, Brand: "BMW", Model: "M4", Year: 2022, Price: 30, Status: "Approved" },
   { id: 1, Brand: "BMW", Model: "M3", Year: 2020, Price: 35, Status: "Rejected" },
   { id: 2, Brand: "BMW", Model: "M2", Year: 2024, Price: 20, Status: "Panding" },

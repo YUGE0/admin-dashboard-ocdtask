@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
-const page = () => {
+const Page = () => {
     
     const router = useRouter();
     const[uname,setUname] = useState("");
@@ -56,4 +56,4 @@ const page = () => {
   )
 }
 
-export default page;
+export default Page;
