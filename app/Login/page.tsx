@@ -2,7 +2,6 @@
 import React from 'react'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { log } from 'console'
 import Image from 'next/image'
 
 const page = () => {
@@ -35,6 +34,7 @@ const page = () => {
     <div className="grid grid-cols-2 lg:gap-10 lg:p-10 place-items-center">
         <Image className='hidden lg:flex w-full h-full mt-40' src="/car.svg" alt="car" height={100} width={100}/>
         <div className="grid gap-10 w-1/2 mt-52 lg:mt-0">
+            {error&&<h1 className="text-red-400">{error}</h1>}
             <h3>Login</h3>
             <input
               type="text"

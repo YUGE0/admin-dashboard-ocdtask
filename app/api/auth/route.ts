@@ -4,8 +4,6 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const { uname, pass } = body;
 
-  console.log("Received login:", uname, pass);
-
   const validUser = process.env.ADMINUIDS;
   const validPass = process.env.ADMINPASS;
 
