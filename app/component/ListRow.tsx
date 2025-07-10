@@ -21,7 +21,15 @@ const ListRow = ({id, Brand, Model, Year, Price, Status,}:ListingProps) => {
 
   const handleStatuschange = (action:string) =>{
     console.log("Action clicked:", action);
-    action == "Approved" ? setStatus("Approved") : action == "Rejected" ? setStatus("Rejected") : setStatus("Panding")
+    
+    if (action === "Approved") {
+      setStatus("Approved");
+    } else if (action === "Rejected") {
+      setStatus("Rejected");
+    } else {
+      setStatus("Panding");
+    }
+
     fetch("/api/listings", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
